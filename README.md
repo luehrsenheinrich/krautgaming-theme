@@ -1,6 +1,6 @@
 # Krautgaming Theme
 
-![🏗 Install, Build & Deploy](https://github.com/luehrsenheinrich/krautgaming-theme/workflows/%F0%9F%8F%97%20Install,%20Build%20&%20Deploy/badge.svg)
+![🏗 Build & Deploy](https://github.com/luehrsenheinrich/krautgaming-theme/workflows/%F0%9F%8F%97%20Build%20&%20Deploy/badge.svg)
 
 The main WordPress theme for krautgaming.com
 
