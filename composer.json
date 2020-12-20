@@ -1,0 +1,22 @@
+{
+	"name": "luehrsenheinrich/wp-theme-boilerplate",
+	"type": "wordpress-theme",
+	"license": "GPL-2.0-or-later",
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+		"squizlabs/php_codesniffer": "^3.1",
+		"composer/installers": "~1.0",
+		"phpcompatibility/php-compatibility": "^9.1",
+		"wp-coding-standards/wpcs": "^2.0",
+		"wptrt/wpthemereview": "dev-develop",
+		"phpcompatibility/phpcompatibility-wp": "^2.0"
+	},
+	"require": {
+
+	},
+	"scripts": {
+		"lint": "phpcs -d memory_limit=-1",
+		"fix": "phpcbf -d memory_limit=-1",
+		"post-install-cmd": "cd build && composer install"
+	}
+}
