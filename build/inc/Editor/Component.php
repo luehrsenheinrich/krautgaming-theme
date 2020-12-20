@@ -63,58 +63,53 @@ class Component implements Component_Interface {
 			array(
 				array(
 					'name'  => __( 'Primary', 'kgtheme' ),
-					'slug'  => 'theme-primary',
-					'color' => '#e36d60',
+					'slug'  => 'primary',
+					'color' => '#26b8ff',
 				),
 				array(
 					'name'  => __( 'Secondary', 'kgtheme' ),
-					'slug'  => 'theme-secondary',
-					'color' => '#41848f',
+					'slug'  => 'secondary',
+					'color' => '#c60f7b',
 				),
 				array(
-					'name'  => __( 'Red', 'kgtheme' ),
-					'slug'  => 'theme-red',
-					'color' => '#C0392B',
-				),
-				array(
-					'name'  => __( 'Green', 'kgtheme' ),
-					'slug'  => 'theme-green',
-					'color' => '#27AE60',
-				),
-				array(
-					'name'  => __( 'Blue', 'kgtheme' ),
-					'slug'  => 'theme-blue',
-					'color' => '#2980B9',
-				),
-				array(
-					'name'  => __( 'Yellow', 'kgtheme' ),
-					'slug'  => 'theme-yellow',
-					'color' => '#F1C40F',
+					'name'  => __( 'Tertiary', 'kgtheme' ),
+					'slug'  => 'tertiary',
+					'color' => '#141b41',
 				),
 				array(
 					'name'  => __( 'Black', 'kgtheme' ),
-					'slug'  => 'theme-black',
-					'color' => '#1C2833',
+					'slug'  => 'black',
+					'color' => '#000000',
 				),
 				array(
-					'name'  => __( 'Grey', 'kgtheme' ),
-					'slug'  => 'theme-grey',
-					'color' => '#95A5A6',
+					'name'  => __( 'Gray Darker', 'kgtheme' ),
+					'slug'  => 'gray-darker',
+					'color' => '#001926',
+				),
+				array(
+					'name'  => __( 'Gray Dark', 'kgtheme' ),
+					'slug'  => 'gray-dark',
+					'color' => '#334751',
+				),
+				array(
+					'name'  => __( 'Gray', 'kgtheme' ),
+					'slug'  => 'gray',
+					'color' => '#66757d',
+				),
+				array(
+					'name'  => __( 'Gray Light', 'kgtheme' ),
+					'slug'  => 'gray-light',
+					'color' => '#99a3a8',
+				),
+				array(
+					'name'  => __( 'Gray Lighter', 'kgtheme' ),
+					'slug'  => 'gray-lighter',
+					'color' => '#ccd1d4',
 				),
 				array(
 					'name'  => __( 'White', 'kgtheme' ),
-					'slug'  => 'theme-white',
-					'color' => '#ECF0F1',
-				),
-				array(
-					'name'  => __( 'Dusty daylight', 'kgtheme' ),
-					'slug'  => 'custom-daylight',
-					'color' => '#97c0b7',
-				),
-				array(
-					'name'  => __( 'Dusty sun', 'kgtheme' ),
-					'slug'  => 'custom-sun',
-					'color' => '#eee9d1',
+					'slug'  => 'white',
+					'color' => '#ffffff',
 				),
 			)
 		);
@@ -154,5 +149,8 @@ class Component implements Component_Interface {
 				),
 			)
 		);
+
+		add_theme_support( 'disable-custom-colors' );
+		add_theme_support( 'disable-custom-font-sizes' );
 	}
 }
