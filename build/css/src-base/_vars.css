@@ -5,9 +5,35 @@
 :root {
 
 	/** Colors **/
-	--primary-color: #26303d;
-	--secondary-color: #23ad7b;
+	--primary-color: #26b8ff;
+	--secondary-color: #c60f7b;
+	--tertiary-color: #141b41;
 	--text-color: #333;
+
+	/** Primary Gradient **/
+	--primary-color-80: #1e93cc;
+	--primary-color-60: #176e99;
+	--primary-color-40: #0f4a66;
+	--primary-color-20: #082533;
+
+	/** Secondary Gradient **/
+	--secondary-color-80: #a73277;
+	--secondary-color-60: #7d2659;
+	--secondary-color-40: #54193c;
+	--secondary-color-20: #2a0d1e;
+
+	/** Tertiary Gradient **/
+	--tertiary-color-80: #434967;
+	--tertiary-color-60: #72768d;
+	--tertiary-color-40: #a1a4b3;
+	--tertiary-color-20: #d0d1d9;
+
+	/** Grays **/
+	--gray-darker: #001926;
+	--gray-dark: #334751;
+	--gray: #66757d;
+	--gray-light: #99a3a8;
+	--gray-lighter: #ccd1d4;
 
 	/** Typography **/
 	--font-family: "Fira Sans", "Arial", "Helvetica", sans-serif;
