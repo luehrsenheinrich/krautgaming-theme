@@ -4,21 +4,21 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package lhtbp
+ * @package kgtheme
  */
 
-if ( ! defined( 'LHTBP_SLUG' ) ) {
-	define( 'LHTBP_SLUG', '<%= pkg.slug %>' );
+if ( ! defined( 'KGTHEME_SLUG' ) ) {
+	define( 'KGTHEME_SLUG', '<%= pkg.slug %>' );
 }
 
-if ( ! defined( 'LHTBP_VERSION' ) ) {
-	define( 'LHTBP_VERSION', '<%= pkg.version %>' );
+if ( ! defined( 'KGTHEME_VERSION' ) ) {
+	define( 'KGTHEME_VERSION', '<%= pkg.version %>' );
 }
 
 require get_template_directory() . '/vendor/autoload.php';
 
-// Load the `wp_lhtbp()` entry point function.
+// Load the `wp_kgtheme()` entry point function.
 require get_template_directory() . '/inc/functions.php';
 
 // Initialize the theme.
-call_user_func( 'WpMunich\lhtbp\wp_lhtbp' );
+call_user_func( 'WpMunich\kgtheme\wp_kgtheme' );

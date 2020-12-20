@@ -33,13 +33,13 @@ if ! $(${WP_CLI} wp core is-installed); then
 
 	# Install WordPress
 	echo $(status_message "Installing WordPress...")
-	${WP_CLI} wp core install --url=localhost --title="WordPress Test" --admin_user=wordpress --admin_password=wordpress --admin_email=test@test.com
+	${WP_CLI} wp core install --url=localhost --title="Krautgaming Test" --admin_user=wordpress --admin_password=wordpress --admin_email=test@test.com
 
 	# Check for WordPress updates, just in case the WordPress image isn't up to date.
 	${WP_CLI} wp core update
 
 	# Activate Agncy
-	${WP_CLI} wp theme activate lhtbp
+	${WP_CLI} wp theme activate kgtheme
 
 	# Import and activate needed plugins
 	${WP_CLI} wp plugin install gutenberg wordpress-importer query-monitor debug-bar theme-check --activate
@@ -50,8 +50,13 @@ if ! $(${WP_CLI} wp core is-installed); then
 	echo $(status_message "Importing WordPress theme unit test data...\n")
 	${WP_CLI} wp import themeunittestdata.wordpress.xml --authors=create
 
+	echo $(status_message "Importing Krautgaming theme unit test data...\n")
+	${WP_CLI} wp import '/test-content/krautgaming.WordPress.2020-12-20.xml' --authors=create
+
 	# Activate debugging
 	${WP_CLI} wp config set WP_DEBUG true --raw
+	${WP_CLI} wp config set WP_ENVIRONMENT_TYPE "development"
+	${WP_CLI} wp config set LH_CURRENTLY_EDITING "kgtheme"
 
 	docker-compose run --user=root wordpress chown www-data -R /var/www/
 

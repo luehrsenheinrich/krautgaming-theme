@@ -1,11 +1,11 @@
 <?php
 /**
- * LHTBP\Component_Interface interface
+ * KGTHEME\Component_Interface interface
  *
- * @package lhtbp
+ * @package kgtheme
  */
 
-namespace WpMunich\lhtbp;
+namespace WpMunich\kgtheme;
 
 /**
  * Interface for a theme component.

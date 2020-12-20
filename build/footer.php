@@ -4,12 +4,12 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package lhtbp
+ * @package kgtheme
  */
 
-namespace WpMunich\lhtbp;
+namespace WpMunich\kgtheme;
 
-wp_lhtbp()->print_styles( 'lhtbp-footer' );
+wp_kgtheme()->print_styles( 'kgtheme-footer' );
 ?>
 
 <footer>

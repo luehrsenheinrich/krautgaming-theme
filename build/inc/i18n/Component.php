@@ -1,12 +1,12 @@
 <?php
 /**
- * LHTBP\i18n\Component class
+ * KGTHEME\i18n\Component class
  *
- * @package lhtbp
+ * @package kgtheme
  */
 
-namespace WpMunich\lhtbp\i18n;
-use WpMunich\lhtbp\Component_Interface;
+namespace WpMunich\kgtheme\i18n;
+use WpMunich\kgtheme\Component_Interface;
 use function add_action;
 
 /**
@@ -36,6 +36,6 @@ class Component implements Component_Interface {
 	 * @return void
 	 */
 	public function load_text_domain() {
-		load_theme_textdomain( 'lhtbp', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'kgtheme', get_template_directory() . '/languages' );
 	}
 }

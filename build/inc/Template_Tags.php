@@ -1,11 +1,11 @@
 <?php
 /**
- * LHTBP\Template_Tags class
+ * KGTHEME\Template_Tags class
  *
- * @package lhtbp
+ * @package kgtheme
  */
 
-namespace WpMunich\lhtbp;
+namespace WpMunich\kgtheme;
 use InvalidArgumentException;
 use BadMethodCallException;
 use RuntimeException;
@@ -15,8 +15,8 @@ use RuntimeException;
  *
  * This class provides access to all available template tag methods.
  *
- * Its instance can be accessed through `wp_lhtbp()`. For example, if there is a template tag called `posted_on`, it can
- * be accessed via `wp_lhtbp()->posted_on()`.
+ * Its instance can be accessed through `wp_kgtheme()`. For example, if there is a template tag called `posted_on`, it can
+ * be accessed via `wp_kgtheme()->posted_on()`.
  */
 class Template_Tags {
 	/**
@@ -47,7 +47,7 @@ class Template_Tags {
 				throw new InvalidArgumentException(
 					sprintf(
 						/* translators: 1: classname/type of the variable, 2: interface name */
-						__( 'The theme templating component %1$s does not implement the %2$s interface.', 'lhtbp' ),
+						__( 'The theme templating component %1$s does not implement the %2$s interface.', 'kgtheme' ),
 						gettype( $component ),
 						Templating_Component_Interface::class
 					)
@@ -73,8 +73,8 @@ class Template_Tags {
 			throw new BadMethodCallException(
 				sprintf(
 					/* translators: %s: template tag name */
-					__( 'The template tag %s does not exist.', 'lhtbp' ),
-					'wp_lhtbp()->' . $method . '()'
+					__( 'The template tag %s does not exist.', 'kgtheme' ),
+					'wp_kgtheme()->' . $method . '()'
 				)
 			);
 		}
@@ -99,7 +99,7 @@ class Template_Tags {
 				throw new InvalidArgumentException(
 					sprintf(
 						/* translators: 1: template tag method name, 2: component class name */
-						__( 'The template tag method %1$s registered by theme component %2$s must either be a callable or an array.', 'lhtbp' ),
+						__( 'The template tag method %1$s registered by theme component %2$s must either be a callable or an array.', 'kgtheme' ),
 						$method_name,
 						get_class( $component )
 					)
@@ -109,7 +109,7 @@ class Template_Tags {
 				throw new RuntimeException(
 					sprintf(
 						/* translators: 1: template tag method name, 2: component class name */
-						__( 'The template tag method %1$s registered by theme component %2$s conflicts with an already registered template tag of the same name.', 'lhtbp' ),
+						__( 'The template tag method %1$s registered by theme component %2$s conflicts with an already registered template tag of the same name.', 'kgtheme' ),
 						$method_name,
 						get_class( $component )
 					)

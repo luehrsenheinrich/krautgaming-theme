@@ -1,11 +1,11 @@
 <?php
 /**
- * LHTBP\Theme class
+ * KGTHEME\Theme class
  *
- * @package lhtbp
+ * @package kgtheme
  */
 
-namespace WpMunich\lhtbp;
+namespace WpMunich\kgtheme;
 use InvalidArgumentException;
 
 /**
@@ -51,7 +51,7 @@ class Theme {
 				throw new InvalidArgumentException(
 					sprintf(
 						/* translators: 1: classname/type of the variable, 2: interface name */
-						__( 'The theme component %1$s does not implement the %2$s interface.', 'lhtbp' ),
+						__( 'The theme component %1$s does not implement the %2$s interface.', 'kgtheme' ),
 						gettype( $component ),
 						Component_Interface::class
 					)
@@ -87,9 +87,9 @@ class Theme {
 	/**
 	 * Retrieves the template tags instance, the entry point exposing template tag methods.
 	 *
-	 * Calling `wp_lhtbp()` is a short-hand for calling this method on the main theme instance. The instance then allows
+	 * Calling `wp_kgtheme()` is a short-hand for calling this method on the main theme instance. The instance then allows
 	 * for actual template tag methods to be called. For example, if there is a template tag called `posted_on`, it can
-	 * be accessed via `wp_lhtbp()->posted_on()`.
+	 * be accessed via `wp_kgtheme()->posted_on()`.
 	 *
 	 * @return Template_Tags Template tags instance.
 	 */
@@ -112,7 +112,7 @@ class Theme {
 			throw new InvalidArgumentException(
 				sprintf(
 					/* translators: %s: slug */
-					__( 'No theme component with the slug %s exists.', 'lhtbp' ),
+					__( 'No theme component with the slug %s exists.', 'kgtheme' ),
 					$slug
 				)
 			);
@@ -129,13 +129,14 @@ class Theme {
 	 */
 	protected function get_default_components() {
 		$components = array(
+			new ACF\Component(),
 			new Content_Width\Component(),
-			new i18n\Component(),
+			new Editor\Component(),
 			new Nav_Menus\Component(),
 			new Scripts\Component(),
 			new Styles\Component(),
 			new Theme_Supports\Component(),
-			new ACF\Component(),
+			new i18n\Component(),
 		);
 
 		return $components;

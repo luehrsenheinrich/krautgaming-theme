@@ -1,14 +1,14 @@
 <?php
 /**
- * LHTBP\Styles\Component class
+ * KGTHEME\Styles\Component class
  *
- * @package lhtbp
+ * @package kgtheme
  */
 
-namespace WpMunich\lhtbp\Styles;
+namespace WpMunich\kgtheme\Styles;
 
-use WpMunich\lhtbp\Component_Interface;
-use WpMunich\lhtbp\Templating_Component_Interface;
+use WpMunich\kgtheme\Component_Interface;
+use WpMunich\kgtheme\Templating_Component_Interface;
 use function add_action;
 use function wp_enqueue_style;
 use function wp_register_style;
@@ -69,19 +69,19 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		}
 
 		$css_files = array(
-			'lhtbp-base' => array(
+			'kgtheme-base' => array(
 				'file'   => 'base.min.css',
 				'global' => true,
 			),
-			'lhtbp-font-fira-sans' => array(
+			'kgtheme-font-fira-sans' => array(
 				'file'   => 'font-fira-sans.min.css',
 				'global' => true,
 			),
-			'lhtbp-blocks' => array(
+			'kgtheme-blocks' => array(
 				'file'             => 'blocks.min.css',
 				'preload_callback' => '__return_true',
 			),
-			'lhtbp-footer' => array(
+			'kgtheme-footer' => array(
 				'file'             => 'footer.min.css',
 				'preload_callback' => '__return_true',
 			),
@@ -96,7 +96,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		 *                         enqueued instead of just being registered) and 'preload_callback' (callback)
 		 *                         function determining whether the file should be preloaded for the current request).
 		 */
-		$css_files = apply_filters( 'lhtbp_css_files', $css_files );
+		$css_files = apply_filters( 'kgtheme_css_files', $css_files );
 
 		$this->css_files = array();
 		foreach ( $css_files as $handle => $data ) {
@@ -128,7 +128,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * Using this technique generally improves performance, however may not be preferred under certain circumstances.
 	 * For example, since AMP will include all style rules directly in the head, it must not be used in that context.
 	 * By default, this method returns true unless the page is being served in AMP. The
-	 * {@see 'lhtbp_preloading_styles_enabled'} filter can be used to tweak the return value.
+	 * {@see 'kgtheme_preloading_styles_enabled'} filter can be used to tweak the return value.
 	 *
 	 * @return bool True if preloading stylesheets and injecting them is enabled, false otherwise.
 	 */
@@ -140,7 +140,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		 *
 		 * @param bool $preloading_styles_enabled Whether preloading stylesheets and injecting them is enabled.
 		 */
-		return apply_filters( 'lhtbp_preloading_styles_enabled', $preloading_styles_enabled );
+		return apply_filters( 'kgtheme_preloading_styles_enabled', $preloading_styles_enabled );
 	}
 
 	/**
@@ -170,7 +170,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 
 				if ( ! $is_valid ) {
 					/* translators: %s: stylesheet handle */
-					_doing_it_wrong( __CLASS__ . '::print_styles()', esc_html( sprintf( __( 'Invalid theme stylesheet handle: %s', 'lhtbp' ), $handle ) ), 'lhtbp' );
+					_doing_it_wrong( __CLASS__ . '::print_styles()', esc_html( sprintf( __( 'Invalid theme stylesheet handle: %s', 'kgtheme' ), $handle ) ), 'kgtheme' );
 				}
 
 				return $is_valid;
@@ -213,10 +213,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			 * enqueued based on whether they are necessary for the page content).
 			 */
 			if ( $data['global'] || ! $preloading_styles_enabled && is_callable( $data['preload_callback'] ) && call_user_func( $data['preload_callback'] ) ) {
-				wp_enqueue_style( $handle, $src, array(), LHTBP_VERSION, $data['media'] );
+				wp_enqueue_style( $handle, $src, array(), KGTHEME_VERSION, $data['media'] );
 				$this->css_files[ $handle ]['enqueued'] = true;
 			} else {
-				wp_register_style( $handle, $src, array(), LHTBP_VERSION, $data['media'] );
+				wp_register_style( $handle, $src, array(), KGTHEME_VERSION, $data['media'] );
 			}
 
 			wp_style_add_data( $handle, 'precache', true );
@@ -283,7 +283,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			$src = $css_uri . $data['file'];
 
 			if ( ! $data['global'] && $data['preloaded'] && ! $data['enqueued'] ) {
-				wp_enqueue_style( $handle, $src, array(), LHTBP_VERSION, $data['media'] );
+				wp_enqueue_style( $handle, $src, array(), KGTHEME_VERSION, $data['media'] );
 			}
 		}
 	}

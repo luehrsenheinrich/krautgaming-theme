@@ -32,10 +32,10 @@ new repository. So let's get started:
 
 ### Theme Slug & Names
 
-- [ ] Search & Replace `lhtbp` with your new WordPress theme slug
-- [ ] Search & Replace (case sensitive) `lhtbp` with your new WordPress theme slug
-- [ ] Search & Replace (case sensitive) `jslhtbp` with your new WordPress theme slug in camelcase
-- [ ] Search & Replace (case sensitive) `lhtbp` with your new WordPress theme slug in uppercase
+- [ ] Search & Replace `kgtheme` with your new WordPress theme slug
+- [ ] Search & Replace (case sensitive) `kgtheme` with your new WordPress theme slug
+- [ ] Search & Replace (case sensitive) `jskgtheme` with your new WordPress theme slug in camelcase
+- [ ] Search & Replace (case sensitive) `kgtheme` with your new WordPress theme slug in uppercase
 - [ ] Check success in `package.json`, `docker-compose.json` & `bin/install-wordpress.sh`
 - [ ] Adjust `name` in `package.json` and `Theme Name` in `build/less/style.less`
 

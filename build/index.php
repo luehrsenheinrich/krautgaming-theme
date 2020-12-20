@@ -9,16 +9,16 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package lhtbp
+ * @package kgtheme
  */
 
-namespace WpMunich\lhtbp;
+namespace WpMunich\kgtheme;
 
 get_header();
 ?>
 
 <div id="primary" class="content-area">
-	<?php wp_lhtbp()->print_styles( 'lhtbp-blocks' ); ?>
+	<?php wp_kgtheme()->print_styles( 'kgtheme-blocks' ); ?>
 	<main id="main" class="site-main stack">
 		<?php
 		if ( have_posts() ) :

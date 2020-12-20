@@ -2,12 +2,12 @@
 /**
  * WP_Rig\WP_Rig\Editor\Component class
  *
- * @package lhtbp
+ * @package kgtheme
  */
 
-namespace WpMunich\lhtbp\Editor;
+namespace WpMunich\kgtheme\Editor;
 
-use WpMunich\lhtbp\Component_Interface;
+use WpMunich\kgtheme\Component_Interface;
 use function add_action;
 use function add_theme_support;
 
@@ -62,57 +62,57 @@ class Component implements Component_Interface {
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Primary', 'lhtbp' ),
+					'name'  => __( 'Primary', 'kgtheme' ),
 					'slug'  => 'theme-primary',
 					'color' => '#e36d60',
 				),
 				array(
-					'name'  => __( 'Secondary', 'lhtbp' ),
+					'name'  => __( 'Secondary', 'kgtheme' ),
 					'slug'  => 'theme-secondary',
 					'color' => '#41848f',
 				),
 				array(
-					'name'  => __( 'Red', 'lhtbp' ),
+					'name'  => __( 'Red', 'kgtheme' ),
 					'slug'  => 'theme-red',
 					'color' => '#C0392B',
 				),
 				array(
-					'name'  => __( 'Green', 'lhtbp' ),
+					'name'  => __( 'Green', 'kgtheme' ),
 					'slug'  => 'theme-green',
 					'color' => '#27AE60',
 				),
 				array(
-					'name'  => __( 'Blue', 'lhtbp' ),
+					'name'  => __( 'Blue', 'kgtheme' ),
 					'slug'  => 'theme-blue',
 					'color' => '#2980B9',
 				),
 				array(
-					'name'  => __( 'Yellow', 'lhtbp' ),
+					'name'  => __( 'Yellow', 'kgtheme' ),
 					'slug'  => 'theme-yellow',
 					'color' => '#F1C40F',
 				),
 				array(
-					'name'  => __( 'Black', 'lhtbp' ),
+					'name'  => __( 'Black', 'kgtheme' ),
 					'slug'  => 'theme-black',
 					'color' => '#1C2833',
 				),
 				array(
-					'name'  => __( 'Grey', 'lhtbp' ),
+					'name'  => __( 'Grey', 'kgtheme' ),
 					'slug'  => 'theme-grey',
 					'color' => '#95A5A6',
 				),
 				array(
-					'name'  => __( 'White', 'lhtbp' ),
+					'name'  => __( 'White', 'kgtheme' ),
 					'slug'  => 'theme-white',
 					'color' => '#ECF0F1',
 				),
 				array(
-					'name'  => __( 'Dusty daylight', 'lhtbp' ),
+					'name'  => __( 'Dusty daylight', 'kgtheme' ),
 					'slug'  => 'custom-daylight',
 					'color' => '#97c0b7',
 				),
 				array(
-					'name'  => __( 'Dusty sun', 'lhtbp' ),
+					'name'  => __( 'Dusty sun', 'kgtheme' ),
 					'slug'  => 'custom-sun',
 					'color' => '#eee9d1',
 				),
@@ -129,26 +129,26 @@ class Component implements Component_Interface {
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => __( 'Small', 'lhtbp' ),
-					'shortName' => __( 'S', 'lhtbp' ),
+					'name'      => __( 'Small', 'kgtheme' ),
+					'shortName' => __( 'S', 'kgtheme' ),
 					'size'      => 16,
 					'slug'      => 'small',
 				),
 				array(
-					'name'      => __( 'Medium', 'lhtbp' ),
-					'shortName' => __( 'M', 'lhtbp' ),
+					'name'      => __( 'Medium', 'kgtheme' ),
+					'shortName' => __( 'M', 'kgtheme' ),
 					'size'      => 25,
 					'slug'      => 'medium',
 				),
 				array(
-					'name'      => __( 'Large', 'lhtbp' ),
-					'shortName' => __( 'L', 'lhtbp' ),
+					'name'      => __( 'Large', 'kgtheme' ),
+					'shortName' => __( 'L', 'kgtheme' ),
 					'size'      => 31,
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => __( 'Larger', 'lhtbp' ),
-					'shortName' => __( 'XL', 'lhtbp' ),
+					'name'      => __( 'Larger', 'kgtheme' ),
+					'shortName' => __( 'XL', 'kgtheme' ),
 					'size'      => 39,
 					'slug'      => 'larger',
 				),

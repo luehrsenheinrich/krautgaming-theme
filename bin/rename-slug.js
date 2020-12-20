@@ -10,7 +10,7 @@ var prompt_attributes = [
 		name: 'oldSlug',
 		type: 'string',
 		hidden: false,
-		default: 'lhtbp',
+		default: 'kgtheme',
 	},
 	{
 		name: 'newSlug',

@@ -1,12 +1,12 @@
 <?php
 /**
- * LHTBP\Content_Width\Component class
+ * KGTHEME\Content_Width\Component class
  *
- * @package lhtbp
+ * @package kgtheme
  */
 
-namespace WpMunich\lhtbp\Content_Width;
-use WpMunich\lhtbp\Component_Interface;
+namespace WpMunich\kgtheme\Content_Width;
+use WpMunich\kgtheme\Component_Interface;
 use function add_action;
 
 /**
