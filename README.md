@@ -23,10 +23,6 @@ With a huge blocks ecosystem on the horizon new themes should be compatible with
 ### No pixels
 Using pixel values on the web makes sense. [Until it doesn't](https://engageinteractive.co.uk/blog/em-vs-rem-vs-px). Using `rem` and `em` values is more accessible and reliable. So using a `px` value to determine the size of something should be the absolute exception and very well justified.
 
-## Documentation
-
-Developer documentation is available in the [Wiki](./../../wiki).
-
 ## Contributing
 
 Every bit of help is highly appreciated. Even if you don't code you can file an issue and help us find bugs or shape new features. Please see the [CONTRIBUTING.md](./CONTRIBUTING.md) on how to contribute.

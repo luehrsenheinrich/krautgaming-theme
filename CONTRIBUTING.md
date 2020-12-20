@@ -62,10 +62,8 @@ For example, add/gallery-block means you're working on adding a new gallery bloc
 
 ## Releasing Updates
 
-The release workflow is more or less automated. A npm workflow takes the code, runs the tests and builds it into a release-ready zip. This zip is then attached to a GitHub release, from where it is then pushed to our own update server.
+The release workflow is more or less automated. Upon creating a release in GitHub, a release ready theme package is automatically built and then pushed to our update server.
 
-While theoretically everyone with write access to the repository has the ability to push a release, the release should only be done by one person, either the *build master* or the *project manager*.
-
-*Important*: The GitHub release is added as a draft and has to be published manually.
+While theoretically everyone with write access to the repository has the ability to push a release, the release should only be done by one person, either the build master or the project manager.
 
 To create a release just run `npm run release`. The perquisites for this are write access to the repository and a GitHub token in the `.env` file.
