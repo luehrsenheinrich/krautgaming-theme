@@ -1,8 +1,6 @@
 {
   "github": {
-    "release": true,
-    "assets": "update/*.zip",
-    "draft": true
+    "release": true
   },
   "npm": {
     "publish": false
