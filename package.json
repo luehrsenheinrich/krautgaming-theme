@@ -61,7 +61,7 @@
     "setup": "sh bin/setup-local-env.sh",
     "dev": "npm run setup && grunt watch",
     "remove": "docker-compose down --volumes --remove-orphans",
-    "release": "env-cmd release-it --only-version",
+    "release": "env-cmd release-it --only-version"
   },
   "browserslist": [
     "extends @wordpress/browserslist-config"
