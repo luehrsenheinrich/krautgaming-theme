@@ -1,58 +1,40 @@
-# Luehrsen // Heinrich Theme Boilerplate for WordPress
+# Krautgaming Theme
 
-[![Build Status](https://travis-ci.com/luehrsenheinrich/wp-theme-boilerplate.svg?branch=master)](https://travis-ci.com/luehrsenheinrich/wp-theme-boilerplate)
+![🏗 Install, Build & Deploy](https://github.com/luehrsenheinrich/krautgaming-theme/workflows/%F0%9F%8F%97%20Install,%20Build%20&%20Deploy/badge.svg)
 
-There are probably more theme boilerplates than actual themes available for
-bootstrapping your work on an amazing WordPress theme. And that is very much
-okay, because every developer, every agency has their own little flavors in how
-they like to do things.
+The main WordPress theme for krautgaming.com
 
-That is the reason we made this theme boilerplate. We liked the work of so many
-other developers before us, but we never found the perfect boilerplate that fit
-our style of work. The result is this, a very opinionated theme boilerplate
-based on docker, grunt and less-css.
+This theme is made with love and brought to you by the folks of [WP Munich](http://www.wp-munich.de) and [Luehrsen // Heinrich](http://www.luehrsen-heinrich.de).
 
-This boilerplate will give you all the tools you need to write, test and publish
-your theme, either for commercial clients or to publish the theme in the
-WordPress.org repository.
+## Paradigms
 
+### Mobile First
+Designs and styles should be made first for the mobile version. This ensures a seamless experience for the majority of mobile users. [Learn more](https://en.ryte.com/wiki/Mobile_First)
 
-## Getting started
+### CSS Grid First
+Contrasting our grid-system-history, this theme should not rely on a traditional grid-system like in [Bootstrap](https://getbootstrap.com/docs/4.0/layout/grid/). While such a 12-col grid is still useful in designing the theme and giving it structure, the resulting CSS code should be declarative and based on [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).
 
-These steps will guide you through the setup process up until you can start
-writing functions, markup and styles for your theme.
+### Alignfull First
+This theme will be primarily build for the new block based editor in WordPress. This means, that the 'normal' state of the content is always the alignfull and smaller states should be restricted in width by a `max-width` setting.
 
-For the sake of scope we will assume that you know the slug of your theme.
-Please make sure that the slug is unique to the system of the client, our
-projects and the WordPress.org theme repository.
+### Compatibility
+With a huge blocks ecosystem on the horizon new themes should be compatible with a wide variety of blocks. This means that content styling has to be as abstract as possible and provide a well defined scaffolding to put content into. The goal is less, more elegant code.
 
-We will also assume, that you have already configured your GitHub repository to
-your liking, downloaded the source of the boilerplate and uploaded it to your
-new repository. So let's get started:
+### No pixels
+Using pixel values on the web makes sense. [Until it doesn't](https://engageinteractive.co.uk/blog/em-vs-rem-vs-px). Using `rem` and `em` values is more accessible and reliable. So using a `px` value to determine the size of something should be the absolute exception and very well justified.
 
-### Theme Slug & Names
+## Documentation
 
-- [ ] Search & Replace `kgtheme` with your new WordPress theme slug
-- [ ] Search & Replace (case sensitive) `kgtheme` with your new WordPress theme slug
-- [ ] Search & Replace (case sensitive) `jskgtheme` with your new WordPress theme slug in camelcase
-- [ ] Search & Replace (case sensitive) `kgtheme` with your new WordPress theme slug in uppercase
-- [ ] Check success in `package.json`, `docker-compose.json` & `bin/install-wordpress.sh`
-- [ ] Adjust `name` in `package.json` and `Theme Name` in `build/less/style.less`
+Developer documentation is available in the [Wiki](./../../wiki).
 
-### Running the enviroment
+## Contributing
 
-- [ ] Type `npm run setup` into the terminal to spin up the docker enviroment
-- [ ] Open `http://localhost/wp-admin` and log in with `wordpress:wordpress`
-- [ ] Make sure the theme unit demo content is installed and the theme is active
+Every bit of help is highly appreciated. Even if you don't code you can file an issue and help us find bugs or shape new features. Please see the [CONTRIBUTING.md](./CONTRIBUTING.md) on how to contribute.
 
-### Test Release
+## License
 
-- [ ] Add a 0.0.2 release by running `npm run release` in your terminal
-- [ ] Check if the release has been created and uploaded in the GitHub release section
+This plugin is licensed under [GNU General Public License v2 (or later)](./LICENSE.md).
 
-### Finishing touches
+## Changelog
 
-- [ ] Edit the `theme-README.md` with the appropriate text about your theme
-- [ ] Delete (or rename) the `README.md` (this file)
-- [ ] Rename the `theme-README.md` to `README.md`
-- [ ] 🎉  Celebrate!
+Please find the current [changelog here](./../../releases).
