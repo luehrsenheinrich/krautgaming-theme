@@ -21,32 +21,43 @@
 	--bp-sm: 48rem; /** 768px **/
 	--bp-md: 60rem; /** 960px **/
 	--bp-lg: 75rem; /** 1200px **/
+	--bp-hd: 90rem; /** 1440px **/
 
 	/** Content Widths **/
 	--content-xs: calc(100vw - var(--grid-gutter-width) * 2);
 	--content-sm: calc((var(--bp-sm) * 12 / 12));
 	--content-md: calc((var(--bp-md) * 10 / 12));
 	--content-lg: calc((var(--bp-lg) * 8 / 12));
+	--content-hd: calc((var(--bp-hd) * 8 / 12));
 
-	/** Typography **/
+	/** Typography Settings */
 	--global-font-size: 16;
 	--global-font-line-height: 1.5;
 	--global-headline-line-height: 1.3;
+	--type-scale: 1.2;
 	--global-letter-spacing: normal;
 
-	/** Headline font sizes **/
-	--global-h1-font-size: calc(32 / var(--global-font-size) * 1rem);
-	--global-h2-font-size: calc(30 / var(--global-font-size) * 1rem);
-	--global-h3-font-size: calc(28 / var(--global-font-size) * 1rem);
-	--global-h4-font-size: calc(24 / var(--global-font-size) * 1rem);
-	--global-h5-font-size: calc(20 / var(--global-font-size) * 1rem);
-	--global-h6-font-size: calc(18 / var(--global-font-size) * 1rem);
+	/**
+	 * Define the type scale
+	 *
+	 * Variable names: --font-size-{large/small}-{multiplier}
+	 **/
+	--font-size-l-1: calc(var(--global-font-size) / 16 * 1rem * var(--type-scale));
+	--font-size-l-2: calc(var(--font-size-l-1) * var(--type-scale));
+	--font-size-l-3: calc(var(--font-size-l-2) * var(--type-scale));
+	--font-size-l-4: calc(var(--font-size-l-3) * var(--type-scale));
+	--font-size-l-5: calc(var(--font-size-l-4) * var(--type-scale));
+	--font-size-l-6: calc(var(--font-size-l-5) * var(--type-scale));
+	--font-size-l-7: calc(var(--font-size-l-6) * var(--type-scale));
+	--font-size-s-1: calc(var(--global-font-size) / 16 * 1rem / var(--type-scale));
+	--font-size-s-2: calc(var(--font-size-s-1) / var(--type-scale));
+	--font-size-s-3: calc(var(--font-size-s-2) / var(--type-scale));
 
 	/* Custom editor font sizes */
-	--font-size-small: calc(14 / var(--global-font-size) * 1rem);
-	--font-size-regular: calc(16 / var(--global-font-size) * 1rem);
-	--font-size-large: var(--global-h4-font-size);
-	--font-size-larger: var(--global-h1-font-size);
+	--font-size-small: var(--font-size-s-1);
+	--font-size-regular: calc(var(--global-font-size) / 16 * 1rem);
+	--font-size-large: var(--font-size-l-1);
+	--font-size-larger: var(--font-size-l-2);
 
 	/** Define a base variable, that is overwritten by responsive breakpoints **/
 	--content-width: var(--content-xs);
@@ -60,19 +71,7 @@
 	:root {
 
 		/** Typography **/
-		--global-letter-spacing: 0.5px;
-
-		/** Headline font sizes **/
-		--global-h1-font-size: calc(48 / var(--global-font-size) * 1rem);
-		--global-h2-font-size: calc(40 / var(--global-font-size) * 1rem);
-		--global-h3-font-size: calc(36 / var(--global-font-size) * 1rem);
-		--global-h4-font-size: calc(32 / var(--global-font-size) * 1rem);
-		--global-h5-font-size: calc(24 / var(--global-font-size) * 1rem);
-		--global-h6-font-size: calc(22 / var(--global-font-size) * 1rem);
-
-		/* Custom editor font sizes */
-		--font-size-small: calc(14 / var(--global-font-size) * 1rem);
-		--font-size-regular: calc(18 / var(--global-font-size) * 1rem);
+		--global-font-size: 18;
 
 		/* Content width */
 		--content-width: var(--content-sm);
@@ -85,6 +84,10 @@
 
 	:root {
 
+		/** Typography **/
+		--global-font-size: 20;
+		--type-scale: 1.25;
+
 		/* Content width */
 		--content-width: var(--content-md);
 
@@ -96,9 +99,24 @@
 
 	:root {
 
+		/** Typography **/
+		--global-font-size: 20;
+		--type-scale: 1.3333;
+
 		/* Content width */
 		--content-width: var(--content-lg);
 
 		--last-bp: var(--bp-lg);
+	}
+}
+
+@media (--hd-query) {
+
+	:root {
+
+		/* Content width */
+		--content-width: var(--content-hd);
+
+		--last-bp: var(--bp-hd);
 	}
 }

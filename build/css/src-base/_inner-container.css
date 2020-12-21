@@ -32,9 +32,12 @@
 			max-width: var(--content-md);
 		}
 
-
 		@media (--lg-query) {
 			max-width: var(--content-lg);
+		}
+
+		@media (--hd-query) {
+			max-width: var(--content-hd);
 		}
 
 		& + * {

@@ -36,27 +36,27 @@ h6 {
 }
 
 h1 {
-	font-size: var(--global-h1-font-size);
+	font-size: var(--font-size-l-5);
 }
 
 h2 {
-	font-size: var(--global-h2-font-size);
+	font-size: var(--font-size-l-4);
 }
 
 h3 {
-	font-size: var(--global-h3-font-size);
+	font-size: var(--font-size-l-3);
 }
 
 h4 {
-	font-size: var(--global-h4-font-size);
+	font-size: var(--font-size-l-2);
 }
 
 h5 {
-	font-size: var(--global-h5-font-size);
+	font-size: var(--font-size-l-1);
 }
 
 h6 {
-	font-size: var(--global-h6-font-size);
+	font-size: 1rem;
 }
 
 dfn,
@@ -78,7 +78,7 @@ blockquote {
 
 blockquote cite {
 	color: var(--color-quote-citation);
-	font-size: 13px;
+	font-size: var(--font-size-s-2);
 	margin-top: 1em;
 	position: relative;
 	font-style: normal;
@@ -104,7 +104,7 @@ kbd,
 tt,
 var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 0.8rem;
+	font-size: var(--font-size-s-1);
 }
 
 abbr,
